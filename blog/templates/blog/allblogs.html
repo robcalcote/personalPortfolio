@@ -32,49 +32,23 @@
             <div class="navbar-nav ml-auto">
               <a class="nav-item nav-link" href="#">GitHub</a>
               <a class="nav-item nav-link" href="#">LinkedIn</a>
-              <a class="nav-item nav-link" href="#">Blog</a>
+              <a class="nav-item nav-link active" href="#">Blog</a>
             </div>
           </div>
      </nav>
     </header>
 
     <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Hi, I'm Rob!</h1>
-          <p class="lead text-muted">This is my first Django website, I'm thrilled to be learning and my goal is to help you build your
-          ideas into real functioning sites!</p>
-          <p>
-            <a href="mailto:rcalcote.diamond@gmail.com" class="btn btn-primary my-2">Contact Me</a>
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
         <div class="container">
 
-
-          <div class="row">
-
-          <!-- for loop to create a space for each job -->
-            {% for job in jobs.all %}
-                <div class="col-md-4">
-                  <div class="card mb-4 shadow-sm">
-                    <img class="card-img-top" src="{{ job.image.url }}" />
-                    <div class="card-body">
-                      <p class="card-text">{{ job.summary }}</p>
-                    </div>
-                  </div>
-                </div>
-            {% endfor %}
-
-          </div>
-
+            <!-- This will dynamically link to my latest blog post on my external site - www.thedevelopersdictionary.com -->
+            <h1 class="text-center pt-5">theDevelopersDictionary.com</h1>
+            <br />
+            <br />
+            <h2>Latest Posts</h2>
+            <hr />
 
         </div>
-      </div>
-
     </main>
 
     <footer class="text-muted">
