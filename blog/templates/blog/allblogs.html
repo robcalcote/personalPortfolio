@@ -49,7 +49,23 @@
             <hr />
 
         </div>
+
+
     </main>
+
+        <div class="container">
+          <!-- for loop to create a space for each job -->
+              {% for blog in blogs.all %}
+
+                  <!-- This will just be links to my blog posts -->
+                  <a href=""><h2>{{ blog.title }}</h2></a>
+                  <img class="img-fluid" src="{{ blog.image.url }}" height="200" width="200"/>
+                  <p>{{ blog.body }}</p>
+                  <br />
+
+              {% endfor %}
+        </div>
+
 
     <footer class="text-muted">
       <div class="container text-center">
