@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
     <title>Rob Calcote's Blog</title>
 
@@ -33,7 +32,7 @@
             <div class="navbar-nav ml-auto">
               <a class="nav-item nav-link" href="https://github.com/robcalcote" target="_blank">GitHub</a>
               <a class="nav-item nav-link" href="https://www.linkedin.com/in/robert-calcote-8387277a/" target="_blank">LinkedIn</a>
-              <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+              <a class="nav-item nav-link active" href="{% url 'allblogs' %}" >Blog</a>
               <a class="nav-item nav-link" href="{% static 'Resume.pdf' %}" target="_blank">Resume</a>
             </div>
           </div>
@@ -60,7 +59,7 @@
               {% for blog in blogs.all %}
 
                   <!-- This will just be links to my blog posts -->
-                  <a href=""><h2>{{ blog.title }}</h2></a>
+                  <a href="{% url 'detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
                   <p>{{ blog.publish_date_pretty }}</p>
                   <img class="img-fluid" src="{{ blog.image.url }}" height="200" width="200"/>
                   <p>{{ blog.summary }}</p>
